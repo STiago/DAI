@@ -1,0 +1,15 @@
+import web
+        
+urls = (
+    '/(.*)', 'hello'
+)
+app = (urls, globals())
+
+class hello:        
+    def GET(self, name):
+        if not name: 
+            name = 'Desarrollo de aplicaciones para internet'
+        return 'Practica 2 - ' + name + '!'
+
+if __name__ == "__main__":
+    app.run()

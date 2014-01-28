@@ -1,0 +1,121 @@
+## -*- coding: utf-8 -*-
+
+<%include file="header.html"/>
+
+                        <a class="etiquetas" href="/template">Inicio</a>, <a class="etiquetas" href="/insercion">Registro</a> , <a class="etiquetas" href="/rss">RSS</a>, <a class="etiquetas" href="/charts">Insertar Charts</a> , <a class="etiquetas" href="/chartsmuestra">Muestra Charts</a> , <a class="etiquetas" href="/mapa">Mapa</a>, <a class="etiquetas" href="/modifica">Modificar</a> , <a class="etiquetas1" href="/datos">Perfil</a> o <a class="etiquetas2" href="/logout">logout</a>
+			</div>
+			<span class="shadow"></span>
+		</div>
+                
+  <div id="page">                
+		<div id="contents">
+			<div class="body">
+                                %if mensaje:
+                                    <p>${mensaje}</p>
+                                %endif
+				<!-- boton tweet -->
+				<a href="https://twitter.com/share" class="twitter-share-button" data-lang="en">Tweet</a>
+    			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+				</script>
+
+				<!-- boton follow -->
+				<a href="https://twitter.com/victorialala" class="twitter-follow-button" data-show-count="false" data-lang="en" data-size="large">Follow @victorialcala</a>
+				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+				</script>
+
+
+				<h2>FORMULARIOS, TEMPLATES, MANEJO DE SESIONES Y PERSISTENCIA</h2>
+                                <p>
+                                    Hacemos reply, retweet y favorito.
+
+												<script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+												<p><a href="https://twitter.com/intent/tweet?in_reply_to=401357728775290880" >Reply,  </a>
+												<a href="https://twitter.com/intent/retweet?tweet_id=401357728775290880">Retweet o </a>
+												<a href="https://twitter.com/intent/favorite?tweet_id=401357728775290880"> Favorite</a></p>    
+                                </p>
+
+										  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+											 <script type="text/javascript">
+												google.load("visualization", "1", {packages:["corechart"]});
+												google.setOnLoadCallback(drawChart);
+
+												function drawChart() {	  
+												  var enero = ${enero}
+												  var febrero = ${febrero}
+												  var marzo = ${marzo}
+												  var abril = ${abril}
+												  var mayo = ${mayo}
+												  var junio = ${junio}
+												  var julio = ${julio}
+												  var agosto = ${agosto}
+												  var septiembre = ${septiembre}
+												  var octubre = ${octubre}
+												  var noviembre = ${noviembre}
+												  var diciembre = ${diciembre}
+
+												  var data = google.visualization.arrayToDataTable([
+													 ['Meses', 'Entradas'],
+													 ['Enero',  enero],
+													 ['Febrero',  febrero],
+													 ['Marzo',  marzo],
+													 ['Abril',  abril],
+													 ['Mayo',  mayo],
+													 ['Junio',  junio],
+													 ['Julio',  julio],
+													 ['Agosto',  agosto],
+													 ['Septiembre',  septiembre],
+													 ['Octubre',  octubre],
+													 ['Noviembre',  noviembre],
+													 ['Diciembre',  diciembre]
+												  ]);
+
+												  var options = {
+													 title: 'Grafica de visitas al museo por meses',
+													 hAxis: {title: 'Meses', titleTextStyle: {color: 'red'}}
+												  };
+
+												  var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+												  chart.draw(data, options);
+												}
+											 </script>
+											<div id="chart_div" style="width: 900px; height: 500px;"></div>
+
+                                <p>
+                                    Para más información, consulte la web de la asignatura en <a href="http://swad.ugr.es/">SWAD</a> 
+                                </p>
+			</div>
+			<div class="body">
+				<div id="featured">
+					<h3>SIGUENOS EN TWITTER</h3>
+						<!-- twet -->
+						<blockquote class="twitter-tweet" data-dnt="true"><p>Primera prueba con Twitter API </p>&mdash; Victoria Santiago (@victorialcala) <a href="https://twitter.com/victorialcala/status/401357728775290880" data-datetime="2013-12-07T20:21:07+00:00">Dicember 13, 2013</a></blockquote>
+<script src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+						<blockquote class="twitter-tweet"><p>Search API will now always return "real" Twitter user IDs. The with_twitter_user_id parameter is no longer necessary. An era has ended. </p>&mdash; Twitter API (@twitterapi) <a href="https://twitter.com/twitterapi/status/133640144317198338" data-datetime="2011-11-07T20:21:07+00:00">November 7, 2011</a></blockquote>
+
+						   
+				</div>
+				<div id="schedule">
+               <h3>Historial de páginas visitadas: </h3>
+					<ul>
+						<li><a class="time" href="${vista1}">Última página visitada</a></li>
+                  <li><a class="time" href="${vista2}">Penúltima página visitada</a></li>
+                  <li><a class="time" href="${vista3}">Primera página visitada</a></li>
+               </ul>
+					<h3>Lista de tweets: </h3>
+					<ul>
+						<!-- timeline -->
+						<a class="twitter-timeline" width="300" height="500"  href="https://twitter.com/victorialcala"  data-widget-id="412277694563246080">Tweets por @victorialcala</a>
+    					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+						</script>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+		
+		</div>
+	</div>
+
+</body>
+</html>

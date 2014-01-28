@@ -1,0 +1,144 @@
+## -*- coding: utf-8 -*-
+
+<%include file="header.html"/>
+
+                            <a class="etiquetas" href="/template">Inicio</a>, <a class="etiquetas" href="/rss">RSS</a>, <a class="etiquetas" href="/charts">Insertar Charts</a> , <a class="etiquetas" href="/chartsmuestra">Muestra Charts</a> , <a class="etiquetas" href="/mapa">Mapa</a>,<a class="etiquetas" href="/datos">Perfil</a>, <a class="etiquetas" href="/modifica">Modificar</a> o <a class="etiquetas2" href="/logout">logout</a>
+			</div>
+			<span class="shadow"></span>
+		</div>
+                
+  <div id="page">                
+		<div id="contents">
+			<div class="body">
+				<div class="frame1">
+                                        <form method="post"> 
+
+                                        ${form.render()}
+
+                                        </form>
+				</div>
+				<h2>FORMULARIOS, TEMPLATES, MANEJO DE SESIONES Y PERSISTENCIA</h2>
+                                <p>
+                                    En esta práctica hemos avanzado con el uso de web.py aprendiendo a usar las opciones de validación de formularios, usando plantillas (templates) para generar cómodamente nuestro código. 
+                                    Hemos usado sesiones para gestionar la identificación de usuarios en la web y otros posibles datos de sesión de nuestra aplicación web.
+                                    Finalmente, hemos gestionado la persistencia usando diversas bases de datos.
+                                </p>
+                                <p>
+                                    Para más información, consulte la web de la asignatura en <a href="http://swad.ugr.es/">SWAD</a> 
+                                </p>
+			</div>
+			<div class="body">
+				<div id="featured">
+					<h3>Recent Performances</h3>
+					
+				</div>
+				<div id="schedule">
+                                    <h3>Historial de páginas visitadas: </h3>
+					<ul>
+						<li><a class="time" href="${vista1}">Última página visitada</a></li>
+                                                <li><a class="time" href="${vista2}">Penúltima página visitada</a></li>
+                                                <li><a class="time" href="${vista3}">Primera página visitada</a></li>
+                                        </ul>
+					<h3>Ejercicios realizados: </h3>
+					<ul>
+						<li>
+							<span class="time">Oct 11-13 9:30am</span> <a href="/imagen">Imágenes</a><br>Prácticas 1 y 2
+						</li>
+						<li>
+							<span class="time">Oct 14-20 9:30am</span> <a href="/fractal">Fractal</a><br>Prácticas1 y 2
+						</li>
+						<li>
+							<span class="time">Oct 28-3 9:30am</span> <a href="/formulario3">Ejemplo formulario</a><br>Práctica 3
+						</li>
+						<li>
+							<span class="time">Nov 4-10 9:30am</span> <a href="/insercion">Ingresar</a><br>Práctica 3
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			<span class="shadow"></span>
+			<div>
+				<div class="section">
+					<h5>Navigation Menu</h5>
+					<ul class="navigation">
+						<li>
+							<a href="index.html">Home</a>
+						</li>
+						<li>
+							<a href="about.html">About</a>
+						</li>
+						<li>
+							<a href="schedules.html">Class Schedules</a>
+						</li>
+						<li>
+							<a href="performance.html">Performances</a>
+						</li>
+						<li>
+							<a href="blog.html">Blog</a>
+						</li>
+						<li>
+							<a href="contact.html">Contact</a>
+						</li>
+					</ul>
+				</div>
+				<div class="section">
+					<h5>Recent Blog Posts</h5>
+					<ul>
+						<li>
+							<a href="blog.html">Dance Tips &amp; Tricks: How To Know If Modern Dance Is Right For You</a>
+						</li>
+						<li>
+							<a href="blog.html">Dance Tips &amp; Tricks:The Secrets To A Successful Dancing Career</a>
+						</li>
+						<li>
+							<a href="blog.html">Daring Dancer: Harillsa Gortengkov</a>
+						</li>
+					</ul>
+				</div>
+				<div class="section">
+					<h5>Studio Hours</h5>
+					<ul>
+						<li>
+							Mondays to Fridays: 8am- 5pm
+						</li>
+						<li>
+							Saturdays: 10am-5pm
+						</li>
+						<li>
+							Sundays: 10am-12nn
+						</li>
+						<li>
+							For Appointments: Call 262-956-6778
+						</li>
+					</ul>
+				</div>
+				<div class="section">
+					<h5>Social</h5>
+					<ul class="connect">
+						<li>
+							<a href="http://freewebsitetemplates.com/go/facebook/" target="_blank">Facebook</a>
+						</li>
+						<li>
+							<a href="http://freewebsitetemplates.com/go/twitter/" target="_blank">Twitter</a>
+						</li>
+						<li>
+							<a href="http://freewebsitetemplates.com/go/youtube/" target="_blank">Vimeo</a>
+						</li>
+						<li>
+							<a href="http://freewebsitetemplates.com/go/googleplus/" target="_blank">Google+</a>
+						</li>
+					</ul>
+					<h5>Newsletter Signup</h5>
+					<form action="index.html" method="post" id="newsletter">
+						<input type="text" value="Enter your email address" class="txtfield" onBlur="javascript:if(this.value==''){this.value=this.defaultValue;}" onFocus="javascript:if(this.value==this.defaultValue){this.value='';}">
+						<input type="submit" value="" class="btn">
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

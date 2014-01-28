@@ -1,0 +1,16 @@
+## -*- coding: utf-8 -*-
+
+<%include file="header.html"/>
+
+% if mensaje:
+  <span id="mensajeerror" style="color:red"> ${mensaje} </span>
+% endif
+
+<form id = "formuini" method="post"> 
+
+${form.render()}
+ 
+</form>
+
+</body>
+</html>

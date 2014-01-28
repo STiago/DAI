@@ -1,0 +1,19 @@
+## -*- coding: utf-8 -*-
+
+<%include file="header.html"/>
+
+
+Identificaté:
+
+% if mensaje:
+  <span style="color:red"> ${mensaje} </span>
+% endif
+
+<form name="main" method="post" action="login"> 
+
+${form.render()}
+
+</form>
+
+</body>
+</html>

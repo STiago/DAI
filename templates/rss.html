@@ -1,0 +1,56 @@
+## -*- coding: utf-8 -*-
+
+<%include file="header.html"/>
+
+                        <a class="etiquetas" href="/template">Inicio</a>, <a class="etiquetas" href="/insercion">Registro</a> , <a class="etiquetas" href="/charts">Insertar Charts</a> , <a class="etiquetas" href="/chartsmuestra">Muestra Charts</a> , <a class="etiquetas" href="/mapa">Mapa</a>, <a class="etiquetas" href="/modifica">Modificar</a> , <a class="etiquetas1" href="/datos">Perfil</a> o <a class="etiquetas2" href="/logout">logout</a>
+			</div>
+			<span class="shadow"></span>
+		</div>
+                
+  <div id="page">                
+		<div id="contents">
+			<div class="body">
+                                %if mensaje:
+                                    <p>${mensaje}</p>
+                                %endif           
+			</div>
+			<div class="body">
+				<div id="featured">
+					<h2>TITULARES</h2>
+						%for i in lista:
+							<p> ${i} </p>
+						%endfor
+				</div>
+				<div id="schedule">
+                                    <h3>Historial de páginas visitadas: </h3>
+					<ul>
+						<li><a class="time" href="${vista1}">Última página visitada</a></li>
+                                                <li><a class="time" href="${vista2}">Penúltima página visitada</a></li>
+                                                <li><a class="time" href="${vista3}">Primera página visitada</a></li>
+                                        </ul>
+					<h3>Ejercicios realizados: </h3>
+					<ul>
+						<li>
+							<span class="time">Oct 11-13 9:30am</span> <a href="/imagen">Imágenes</a><br>Prácticas 1 y 2
+						</li>
+						<li>
+							<span class="time">Oct 14-20 9:30am</span> <a href="/fractal">Fractal</a><br>Prácticas1 y 2
+						</li>
+						<li>
+							<span class="time">Oct 28-3 9:30am</span> <a href="/formulario3">Ejemplo formulario</a><br>Práctica 3
+						</li>
+						<li>
+							<span class="time">Nov 4-10 9:30am</span> <a href="/insercion">Ingresar</a><br>Práctica 3
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			<span class="shadow"></span>
+			
+		</div>
+	</div>
+
+</body>
+</html>

@@ -1,8 +1,0 @@
-$def with (form)
-
-<form name="main" method="post">
-   $if not form.valid: <p class="error">Intenta de Nuevo</p>
-   $:form.render()
-   <input type="submit" value="Entrar" />
-</form>
-
